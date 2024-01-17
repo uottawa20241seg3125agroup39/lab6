@@ -23,9 +23,51 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <div class="container">
+    <h1>Survy Time!</h1>
+
+    <div class="website-image">
+        <a href="https://www.uottawa.ca/en" target="_blank">
+            <img src="https://seeklogo.com/images/U/university-of-ottawa-logo-88B9787547-seeklogo.com.png" alt="Website Screenshot">
+        </a>
+    </div>
+
+    <form id="evaluation-form">
+        <div class="question">
+            <label for="text-question">Please rate：</label>
+            <textarea id="text-question" name="textQuestion" rows="4"></textarea>
+        </div>
+
+
+        <div class="question">
+            <label for="dropdown-question">Are you OK?：</label>
+            <select id="dropdown-question" name="rating">
+                <option value="excellent">excellent</option>
+                <option value="good">good</option>
+                <option value="average">average</option>
+                <option value="poor">poor</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label>Do you like chocolate 🍫 or ice cream 🍦?</label>
+            <input type="checkbox" id="cho" name="Chocolate" value="feature1">
+            <label for="feature1">chocolate</label>
+            <input type="checkbox" id="ice" name="Ice Cream" value="feature2">
+            <label for="feature2">iceCream</label>
+            <!-- Add more checkboxes as needed -->
+        </div>
+
+        <div class="question">
+            <label for="comments">Anyting else：</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <button type="button" onclick="submitForm()">All done!</button>
+    </form>
+
+    <p class="signature">Web design: Yucheng Chen, Sky Jiang, Haoxin Zeng</p>
+</div>
 
 </body>
 
