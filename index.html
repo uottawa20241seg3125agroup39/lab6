@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Lab1 Group39</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="description" content="">
 
@@ -24,18 +24,55 @@
 <body>
 
   <div class="container">
-    <h1>Survy Time!</h1>
-
+    <h1>Survey Time!</h1>
+    <h2>What do you think of the UI in this <a href="https://www.uottawa.ca/en">Uottawa</a> site?</h2>
     <div class="website-image">
         <a href="https://www.uottawa.ca/en" target="_blank">
-            <img src="https://seeklogo.com/images/U/university-of-ottawa-logo-88B9787547-seeklogo.com.png" alt="Website Screenshot">
+            <img src="img/screenshot.PNG" alt="Website Screenshot">
         </a>
     </div>
 
     <form id="form">
-        
         <div class="question">
-            <label for="dropdown-question">Are you OK?：</label>
+          <p>What is your name?</p>
+          <p>First name: <input type="text" name="firstname"></p>
+          <p>Last name: <input type="text" name="lastname"></p>
+
+        </div>
+        <br>
+
+        <div class="question">
+          <p>What year you in at UO?</p>
+          <input type="radio" id="year1" name="years" value="1">
+          <label for="year1">1</label><br>
+
+          <input type="radio" id="year2" name="years" value="2">
+          <label for="year2">2</label><br>
+
+          <input type="radio" id="year3" name="years" value="3">
+          <label for="year3">3</label><br>
+
+          <input type="radio" id="year4" name="years" value="4">
+          <label for="year4">4</label><br>
+
+        </div>
+      <br>
+
+      <div class="question">
+        <p>Overall, are you satisfied you with this website?</p>
+        <input type="radio" id="yes" name="Bool" value="1">
+        <label for="year1">Yes</label><br>
+
+        <input type="radio" id="no" name="Bool" value="2">
+        <label for="year2">No</label><br>
+
+
+
+      </div>
+      <br>
+
+        <div class="question">
+            <label for="dropdown-question">How you think about this website?：</label>
             <select id="dropdown-question" name="rating">
                 <option value="excellent">excellent</option>
                 <option value="good">good</option>
@@ -43,21 +80,34 @@
                 <option value="poor">poor</option>
             </select>
         </div>
-
+      <br>
         <div class="question">
-            <label>Do you like chocolate 🍫 or ice cream 🍦?</label>
-            <input type="checkbox" id="cho" name="Chocolate" value="feature1">
-            <label for="feature1">chocolate</label>
-            <input type="checkbox" id="ice" name="Ice Cream" value="feature2">
-            <label for="feature2">iceCream</label>
+            <label>What do you think the website colors should be? </label>
+            <input type="checkbox" id="feature1" name="Chocolate" value="feature1">
+            <label for="feature1">RED</label>
+            <input type="checkbox" id="feature2" name="Ice Cream" value="feature2">
+            <label for="feature2">BLUE</label>
             <!-- Add more checkboxes as needed -->
         </div>
-
+      <br>
+      <br>
+        <div class="question">
+          <label for="rate">How would you rate this website?</label>
+          <select id="rate" name="Rate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <br>
+          <br>
+        </div>
         <div class="question">
             <label for="comments">Anyting else：</label>
             <textarea id="comments" name="comments" rows="4"></textarea>
         </div>
-
+      <br>
         <button type="button" onclick="submitForm()">All done!</button>
     </form>
 
