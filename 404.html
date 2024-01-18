@@ -49,14 +49,41 @@
         margin: 0 0 0.3em;
       }
 
+
     }
+    #back {
+      width: 150px;
+      height: 50px;
+      font-size: 1.7vh;
+      font-weight: bold;
+
+      background: red;
+
+      border: none;
+
+      color: black;
+      transition: 3s;
+    }
+
   </style>
+  <script>
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue',"purple"];
+    var index = 0;
+
+    window.onload=function() {
+      setInterval(function() {
+        index = (index + 1) % colors.length;
+        document.getElementById('back').style.background = colors[index];
+      }, 2500);
+    }
+  </script>
 </head>
 
 <body>
   <h1>Page Not Found</h1>
   <img src="img/rickroll.gif" >
   <p><h3>Sorry, but the page you were trying to view does not exist.</h3></p>
+  <p><button id="back" onclick="window.history.back();">Gonna go back?</button> </p>
 </body>
 
 </html>
