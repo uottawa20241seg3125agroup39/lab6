@@ -59,6 +59,18 @@
   display: inline-block; /* 或者使用 "inline" */
   margin-right: 10px; /* 添加右边距来分隔列表项 */
 }
+ul.signature li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+ul.signature li:first-child {
+  margin-left: 0;
+}
+
+ul.signature li:last-child {
+  margin-right: 0;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #fafafa;
