@@ -18,7 +18,7 @@
     font-size: 20px;
     font-weight: bold;
 }
-#survey-main {
+#survey-main{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +26,21 @@
   margin: 0;
   flex-wrap: wrap;
   overflow: hidden;
+}
+#survey-title{
+  display: block;
+  align-items: center;
+  align-content: center;
+  min-height: 5vh;
+  text-align: center;
+  margin: auto;
+}
+.title{
+  display: block;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
 }
 .signature{
     font-size: 15px;
