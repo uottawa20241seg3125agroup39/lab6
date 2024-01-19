@@ -64,10 +64,11 @@ body {
   background-color: #fafafa;
   color: #333;
   line-height: 1.5;
-  background-repeat: repeat-x;
-  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-blend-mode: overlay;
   background-image: url("../img/hertaa1.gif");
+  background-position: bottom;
 
 }
 
