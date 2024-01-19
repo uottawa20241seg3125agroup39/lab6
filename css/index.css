@@ -51,14 +51,26 @@
   margin-bottom: 1px;
   margin-top: 3px;
   font-style: italic;
+  padding: 0;
+  list-style-type: none;
 
+}
+.signature li {
+  display: inline-block; /* 或者使用 "inline" */
+  margin-right: 10px; /* 添加右边距来分隔列表项 */
 }
 body {
   font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
   line-height: 1.5;
+  background-repeat: repeat-x;
+  background-size: 100% auto;
+  background-blend-mode: overlay;
+  background-image: url("../img/hertaa1.gif");
+
 }
+
 
 
 
