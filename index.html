@@ -4,157 +4,145 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lab1 Survey - Group39</title>
+  <title>Lab6 Survey - Group39</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
   <meta name="description" content="">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/app.js"></script>
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-<div id="survey-title">
-  <h1 class="title">Survey Time!</h1>
-  <h2 class="title">What do you think of the UI in this <a href="https://www.uottawa.ca/en">uOttawa</a> site?</h2>
+<div class="container text-center mt-5" id="survey-title">
+  <h1>Survey Time!</h1>
+  <h2>What do you think of the UI in this <a href="https://www.uottawa.ca/en">uOttawa</a> site?</h2>
 </div>
 <hr>
-  <div class="container" id="survey-main">
+<div class="container" id="survey-main">
+  <div class="text-center mb-4" id="uo-pic-container">
+    <a href="https://www.uottawa.ca/en" target="_blank" title="Click to goto uOttawa site">
+      <img src="img/screenshot.PNG" alt="Website Screenshot" class="img-fluid" id="uo-pic">
+    </a>
+  </div>
 
-    <div  class="website-image">
-        <a  id="uo-pic-container" href="https://www.uottawa.ca/en" target="_blank" title="Click to goto uOttawa site">
-            <img id="uo-pic" src="img/screenshot.PNG" alt="Website Screenshot">
-        </a>
+  <form>
+    <div class="form-group" id="question">
+      <label>What is your name?</label>
+      <input type="text" class="form-control" name="firstname" placeholder="First name">
+      <input type="text" class="form-control mt-2" name="lastname" placeholder="Last name">
     </div>
 
-
-    <form id="form">
-        <div class="question">
-          <p>What is your name?</p>
-          <p>First name: <input type="text" name="firstname"></p>
-          <p>Last name: <input type="text" name="lastname"></p>
-
+    <div class="form-group">
+      <label>What year you in at UO?</label>
+      <div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="years" id="year1" value="1">
+          <label class="form-check-label" for="year1">1</label>
         </div>
-
-
-        <div class="question">
-          <p>What year you in at UO?</p>
-          <input type="radio" id="year1" name="years" value="1">
-          <label for="year1">1</label>
-
-          <input type="radio" id="year2" name="years" value="2">
-          <label for="year2">2</label>
-
-          <input type="radio" id="year3" name="years" value="3">
-          <label for="year3">3</label>
-
-          <input type="radio" id="year4" name="years" value="4">
-          <label for="year4">4</label>
-
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="years" id="year2" value="2">
+          <label class="form-check-label" for="year2">2</label>
         </div>
-
-
-      <div class="question">
-        <p>Overall, are you satisfied you with this website?</p>
-        <input type="radio" id="q3-yes" name="q3-choice" value="1">
-        <label for="q3-yes">Yes</label>
-
-        <input type="radio" id="q3-no" name="q3-choice" value="2">
-        <label for="q3-no">No</label>
-
-
-
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="years" id="year3" value="3">
+          <label class="form-check-label" for="year3">3</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="years" id="year4" value="4">
+          <label class="form-check-label" for="year4">4</label>
+        </div>
       </div>
-      <br>
+    </div>
 
-        <div class="question">
-            <label for="dropdown-question">How you think about this website?：</label>
-            <select id="dropdown-question" name="rating">
-                <option value="excellent">excellent</option>
-                <option value="good">good</option>
-                <option value="average">average</option>
-                <option value="poor">poor</option>
-            </select>
+    <div class="form-group">
+      <label>Overall, are you satisfied with this website?</label>
+      <div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q3-choice" id="q3-yes" value="1">
+          <label class="form-check-label" for="q3-yes">Yes</label>
         </div>
-      <br>
-        <div class="question">
-            <label>What do you think the website colors should be? </label><br>
-          <!-- red blue green black white purple carleton -->
-            <input type="checkbox" id="q5-red" name="q5-choice" value="red">
-            <label for="q5-red">RED</label>
-            <input type="checkbox" id="q5-blue" name="q5-choice" value="blue">
-            <label for="q5-blue">BLUE</label>
-            <input type="checkbox" id="q5-green" name="q5-choice" value="green">
-            <label for="q5-green">GREEN</label>
-            <input type="checkbox" id="q5-black" name="q5-choice" value="black">
-            <label for="q5-black">BLACK</label>
-            <input type="checkbox" id="q5-white" name="q5-choice" value="white">
-            <label for="q5-white">WHITE</label>
-            <input type="checkbox" id="q5-purple" name="q5-choice" value="purple">
-            <label for="q5-purple">PURPLE</label>
-            <input type="checkbox" id="q5-carleton" name="q5-choice" value="carleton">
-            <label for="q5-carleton">CARLETON style</label>
-
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q3-choice" id="q3-no" value="2">
+          <label class="form-check-label" for="q3-no">No</label>
         </div>
-      <br>
-
-        <div class="question">
-          <label for="rate">How would you rate this website?</label>
-          <select id="rate" name="Rate">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-
-        </div>
-      <div class="question">
-        <p>Have you tried the admission application before?</p>
-        <input type="radio" id="q7-yes" name="q7-choice" value="1">
-        <label for="q7-yes">Yes</label>
-
-        <input type="radio" id="q7-no" name="q7-choice" value="2">
-        <label for="q7-no">No</label><br>
       </div>
+    </div>
 
-      <div class="question">
-        <p>Which language you used?</p>
-        <input type="radio" id="q8-en" name="q8-choice" value="English">
-        <label for="q8-en">English</label>
+    <div class="form-group">
+      <label for="dropdown-question">How you think about this website?</label>
+      <select class="form-control" id="dropdown-question" name="rating">
+        <option value="excellent">excellent</option>
+        <option value="good">good</option>
+        <option value="average">average</option>
+        <option value="poor">poor</option>
+      </select>
+    </div>
 
-        <input type="radio" id="q8-fr" name="q8-choice" value="French">
-        <label for="q8-fr">French</label><br>
-      </div>
-      <br>
-        <div class="question">
-            <label for="comments">Anyting else：</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+    <div class="form-group">
+      <label>What do you think the website colors should be?</label>
+      <div>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input" id="q5-red" name="q5-choice" value="red">
+          <label class="form-check-label" for="q5-red">RED</label>
         </div>
-      <br>
-        <button type="button" onclick="submitForm()">All done!</button>
-    </form>
+        <div class="form-check form-check-inline">
+          <input type="checkbox" class="form-check-input" id="q5-blue" name="q5-choice" value="blue">
+          <label class="form-check-label" for="q5-blue">BLUE</label>
+        </div>
+        <!-- Add more checkboxes here -->
+      </div>
+    </div>
 
+    <div class="form-group">
+      <label for="rate">How would you rate this website?</label>
+      <select class="form-control" id="rate" name="Rate">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </div>
 
+    <div class="form-group">
+      <label>Have you tried the admission application before?</label>
+      <div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q7-choice" id="q7-yes" value="1">
+          <label class="form-check-label" for="q7-yes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="q7-choice" id="q7-no" value="2">
+          <label class="form-check-label" for="q7-no">No</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Anything else：</label>
+      <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-primary" onclick="submitForm()">All done!</button>
+  </form>
 </div>
-<hr>
-  <p class="signature">Web design: Yucheng Chen, Sky Jiang, Haoxin Zeng, Copy right reserved except outside resources.</p>
-<ul class="signature">
-  <li><a target="_blank" href="/index.html" title="Lab Home Page">Home Page</a></li>
-  <li><a target="_blank" href="https://blog.jixiaob.cn/backup/hertakuru/" title="kururu~">Background Img</a></li>
-  <li><a href="doc/lab1-report.pdf" title="Lab Report">Lab Report</a> </li>
-</ul>
-</body>
 
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container text-middle">
+    <p>Web design: Yucheng Chen, Sky Jiang, Haoxin Zeng, Copyright reserved except outside resources.</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="/404.html" title="Lab Home Page">Home Page</a></li>
+      <li class="list-inline-item"><a href="https://blog.jixiaob.cn/backup/hertakuru/" title="kururu~">Background Img</a></li>
+
+    </ul>
+  </div>
+</footer>
+
+</body>
 </html>

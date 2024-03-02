@@ -14,7 +14,7 @@
   margin: 0;
   /*pointer-events: none;*/
 }
-.question{
+#question{
     font-size: 20px;
     font-weight: bold;
 }
@@ -43,7 +43,7 @@
   align-content: center;
   align-self: center;
 }
-.signature{
+.footer{
     font-size: 15px;
     font-weight: lighter;
     text-align: center;
@@ -55,11 +55,11 @@
   list-style-type: none;
 
 }
-.signature li {
+.footer li {
   display: inline-block; /* 或者使用 "inline" */
   margin-right: 10px; /* 添加右边距来分隔列表项 */
 }
-ul.signature li {
+ul.footer li {
   margin-left: 20px;
   margin-right: 20px;
 }
