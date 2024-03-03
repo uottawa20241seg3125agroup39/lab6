@@ -25,28 +25,38 @@
 
 <body>
   <div class="container text-center mt-5" id="survey-title">
-    <h1>Survey Time!</h1>
+    <h1>🧐Survey Time!</h1>
+    <br>
     <h2>What do you think of the UI in this <a href="https://www.uottawa.ca/en">uOttawa</a> site?</h2>
   </div>
 
-  <div class="container" id="survey-main">
+  <div class="container" id="survey-main" style="text-align:center">
 
     <div class="text-center mb-4" id="uo-pic-container">
       <a href="https://www.uottawa.ca/en" target="_blank" title="Click to goto uOttawa site">
-        <img class="img-fluid" src="../img/screenshot.PNG" alt="Website Screenshot" id="uo-pic">
+        <img class="img-thumbnail" src="../img/screenshot.PNG" alt="Website Screenshot" id="uo-pic">
       </a>
     </div>
 
     <form>
 
-    <div class="form-group" id="question">
-      <label>1. Please enter your name.</label>
-      <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name">
-      <input type="text" class="form-control mt-2" id='lname' name="lastname" placeholder="Last name">
+      <label><h3>1. Please enter your name.</h3></label>
+
+    <div class="row" class="form-group" id="question">
+      <div class="col-md-6">
+        <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name">
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control mt-2" id='lname' name="lastname" placeholder="Last name">
+      </div>
+
     </div>
 
+      <br>
+
     <div class="form-group">
-      <label>2. What year you in at UO?</label>
+      <label><h3>2. What year you in at UO?</h3></label>
       <div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="years" id="year1" value="1">
@@ -67,8 +77,10 @@
       </div>
     </div>
 
+      <br>
+
     <div class="form-group">
-      <label>3. Overall, are you satisfied with this website?</label>
+      <label><h3>3. Overall, are you satisfied with this website?</h3></label>
       <div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="q3-choice" id="q3-yes" value="1">
@@ -81,8 +93,10 @@
       </div>
     </div>
 
+      <br>
+
     <div class="form-group">
-      <label for="dropdown-question">4. How you think about this website?</label>
+      <label for="dropdown-question"><h3>4. How you think about this website?</h3></label>
       <select class="form-control" id="dropdown-question" name="rating">
         <option value="excellent">excellent</option>
         <option value="good">good</option>
@@ -91,8 +105,10 @@
       </select>
     </div>
 
+      <br>
+
     <div class="form-group">
-      <label>5. What do you think the website colors should be?</label>
+      <label><h3>5. What do you think the website colors should be?</h3></label>
       <div>
         <div class="form-check form-check-inline">
           <input type="checkbox" class="form-check-input" id="q5-red" name="q5-choice" value="red">
@@ -105,8 +121,10 @@
       </div>
     </div>
 
+        <br>
+
     <div class="form-group">
-      <label for="rate">6. How would you rate this website?</label>
+      <label for="rate"><h3>6. How would you rate this website?</h3></label>
       <select class="form-control" id="rate" name="Rate">
         <option value="1">1</option>
         <option value="2">2</option>
@@ -116,8 +134,10 @@
       </select>
     </div>
 
+        <br>
+
     <div class="form-group">
-      <label>7. Have you tried the admission application before?</label>
+      <label><h3>7. Have you tried the admission application before?</h3></label>
       <div>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="q7-choice" id="q7-yes" value="1">
@@ -130,12 +150,19 @@
       </div>
     </div>
 
+          <br>
+
     <div class="form-group">
-      <label for="comments">8. Anything else：</label>
+      <label for="comments"><h3>8. Anything else：</h3></label>
       <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
     </div>
 
-    <button type="button" class="btn btn-primary" onclick="submitForm()">All done!</button>
+    <div style="text-align:center">
+      <br>
+    <button type="button" class="btn btn-danger" onclick="submitForm()">All done!</button>
+      <br><br><br>
+
+    </div>
 
   </form>
 
