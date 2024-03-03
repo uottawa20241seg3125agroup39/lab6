@@ -7,6 +7,10 @@
   pointer-events: auto;
 
 }
+.custom-select-short {
+  width: 50%; /* 或者使用具体的像素值，例如 200px */
+}
+
 #uo-pic-container{
   display: contents;
   text-align: center;
