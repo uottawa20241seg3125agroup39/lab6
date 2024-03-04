@@ -3,8 +3,9 @@ const {join} = require("path");
 
 
 let app= express();
+app.use(express.static(join(__dirname, '../')));
 app.get('/', function(req, res) {
-  res.sendFile(join(__dirname, 'index.html'));
+  res.sendFile('index.html', {root: join(__dirname, '../view')});
 })
 
 app.listen(800);
