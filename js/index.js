@@ -26,6 +26,8 @@ function submitForm(){
       console.log(data);
       let name=$('input[name="firstname"]').val();
       name+=' '+$('input[name="lastname"]').val();
+      if ('DBG::SUSPEND-RICK-ROLL'===$('#comments').val())
+        return;
       window.location.href = `/submitted?name=${name}`;
     },
     error: function(data){

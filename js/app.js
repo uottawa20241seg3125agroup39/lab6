@@ -1,5 +1,6 @@
 let express = require('express');
 const {join} = require("path");
+const processor = require('./result_processor');
 
 
 let app= express();
@@ -16,7 +17,8 @@ app.get('/submitted', function(req, res) {
 app.post('/submit', function(req, res) {
   console.log('Submission received');
   console.log(req.body);
-  res.sendStatus(200);
+  // res.sendStatus(200);
+  processor(req,res);
   // console.log(req.body.length);
 })
 
