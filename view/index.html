@@ -13,184 +13,185 @@
   <link rel="apple-touch-icon" href="../icon.png">
   <link rel="manifest" href="../site.webmanifest">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <meta name="description" content="">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="/js/index.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid p-5 bg-danger text-white text-center" mt-5" id="survey-title">
-    <h1>🧐Survey Time!</h1>
-    <br>
-    <h2>What do you think of the UI in this <a class="text-white" href="https://www.uottawa.ca/en">uOttawa</a> site?</h2>
-    <br>
-  </div>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-    <div class="container-fluid">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Going Down</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="container" id="survey-main" style="text-align:center">
-
-    <div class="text-center mb-4" id="uo-pic-container">
-      <a href="https://www.uottawa.ca/en" target="_blank" title="Click to goto uOttawa site">
-        <img class="img-thumbnail" src="../img/screenshot.PNG" alt="Website Screenshot" id="uo-pic">
-      </a>
-    </div>
-
-    <form>
-
-      <label><h3>1. Please enter your name.</h3></label>
-
-    <div class="row" class="form-group" id="question">
-
-        <input type="text" class="form-control" id="fname" name="firstname" placeholder="First name">
-        <input type="text" class="form-control mt-2" id='lname' name="lastname" placeholder="Last name">
-
-
-    </div>
-
+  <div class="container">
+    <div class="card-header p-5 bg-danger text-white text-center mt-5" id="survey-title">
+      <h1>🧐Survey Time!</h1>
       <br>
-
-    <div class="form-group">
-      <label><h3>2. What year you in at UO?</h3></label>
-      <div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="years" id="year1" value="1">
-          <label class="form-check-label" for="year1">1</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="years" id="year2" value="2">
-          <label class="form-check-label" for="year2">2</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="years" id="year3" value="3">
-          <label class="form-check-label" for="year3">3</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="years" id="year4" value="4">
-          <label class="form-check-label" for="year4">4</label>
-        </div>
+      <h2>What do you think of the UI in this <a class="text-white" href="https://www.uottawa.ca/en">uOttawa</a> site?</h2>
+      <br>
+    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Going Down</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-      <br>
+    <div  id="survey-main" style="text-align:center">
 
-    <div class="form-group">
-      <label><h3>3. Overall, are you satisfied with this website?</h3></label>
-      <div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q3-choice" id="q3-yes" value="1">
-          <label class="form-check-label" for="q3-yes">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q3-choice" id="q3-no" value="2">
-          <label class="form-check-label" for="q3-no">No</label>
-        </div>
+      <div class="img-fluid align-content-center mb-4" id="uo-pic-container">
+        <a href="https://www.uottawa.ca/en" target="_blank" title="Click to goto uOttawa site">
+          <img class="img-thumbnail" src="../img/screenshot.PNG" alt="Website Screenshot" id="uo-pic">
+        </a>
       </div>
-    </div>
 
-      <br>
+      <form>
 
-    <div class="form-group" >
-      <label for="dropdown-question"><h3>4. How you think about this website?</h3></label>
-      <select class="form-control" id="dropdown-question" name="rating">
-        <option value="excellent">excellent</option>
-        <option value="good">good</option>
-        <option value="average">average</option>
-        <option value="poor">poor</option>
-      </select>
-    </div>
+        <label><h3>1. Please enter your name.</h3></label>
 
-      <br>
+        <div  class="form-group" id="question">
 
-    <div class="form-group">
-      <label><h3>5. What do you think the website colors should be?</h3></label>
-      <div>
-        <div class="form-check form-check-inline">
-          <input type="checkbox" class="form-check-input" id="q5-red" name="q5-choice" value="red">
-          <label class="form-check-label" for="q5-red">RED</label>
+          <input type="text" class="form-control " id="fname" name="firstname" placeholder="First name">
+          <input type="text" class="form-control mt-2" id='lname' name="lastname" placeholder="Last name">
+
+
         </div>
-        <div class="form-check form-check-inline">
-          <input type="checkbox" class="form-check-input" id="q5-blue" name="q5-choice" value="blue">
-          <label class="form-check-label" for="q5-blue">BLUE</label>
-        </div>
-      </div>
-    </div>
 
         <br>
 
-    <div class="form-group">
-      <label for="rate"><h3>6. How would you rate this website?</h3></label>
-      <select class="form-control" id="rate" name="Rate">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
+        <div class="form-group">
+          <label><h3>2. What year you in at UO?</h3></label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="years" id="year1" value="1">
+              <label class="form-check-label" for="year1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="years" id="year2" value="2">
+              <label class="form-check-label" for="year2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="years" id="year3" value="3">
+              <label class="form-check-label" for="year3">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="years" id="year4" value="4">
+              <label class="form-check-label" for="year4">4</label>
+            </div>
+          </div>
+        </div>
 
         <br>
 
-    <div class="form-group">
-      <label><h3>7. Have you tried the admission application before?</h3></label>
-      <div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q7-choice" id="q7-yes" value="1">
-          <label class="form-check-label" for="q7-yes">Yes</label>
+        <div class="form-group">
+          <label><h3>3. Overall, are you satisfied with this website?</h3></label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="q3-choice" id="q3-yes" value="1">
+              <label class="form-check-label" for="q3-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="q3-choice" id="q3-no" value="2">
+              <label class="form-check-label" for="q3-no">No</label>
+            </div>
+          </div>
         </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="q7-choice" id="q7-no" value="2">
-          <label class="form-check-label" for="q7-no">No</label>
-        </div>
-      </div>
-    </div>
 
+        <br>
+
+        <div class="form-group" >
+          <label for="dropdown-question"><h3>4. How you think about this website?</h3></label>
+          <select class="form-control" id="dropdown-question" name="rating">
+            <option value="excellent">excellent</option>
+            <option value="good">good</option>
+            <option value="average">average</option>
+            <option value="poor">poor</option>
+          </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label><h3>5. What do you think the website colors should be?</h3></label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="q5-red" name="q5-choice" value="red">
+              <label class="form-check-label" for="q5-red">RED</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" class="form-check-input" id="q5-blue" name="q5-choice" value="blue">
+              <label class="form-check-label" for="q5-blue">BLUE</label>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label for="rate"><h3>6. How would you rate this website?</h3></label>
+          <select class="form-control" id="rate" name="Rate">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label><h3>7. Have you tried the admission application before?</h3></label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="q7-choice" id="q7-yes" value="1">
+              <label class="form-check-label" for="q7-yes">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="q7-choice" id="q7-no" value="2">
+              <label class="form-check-label" for="q7-no">No</label>
+            </div>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="form-group">
+          <label for="comments"><h3>8. Anything else：</h3></label>
+          <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+        </div>
+
+        <div style="text-align:center">
           <br>
+          <button type="button" class="btn btn-danger" onclick="submitForm()"><span>All done!</span></button>
+          <br><br><br>
 
-    <div class="form-group">
-      <label for="comments"><h3>8. Anything else：</h3></label>
-      <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
-    </div>
+        </div>
 
-    <div style="text-align:center">
-      <br>
-    <button type="button" class="btn btn-danger" onclick="submitForm()"><span>All done!</span></button>
-      <br><br><br>
+      </form>
 
     </div>
 
-  </form>
+    <footer class="footer mt-auto py-3 bg-danger text-white">
+      <div class="text-center">
+        <p>Web design: Yucheng Chen, Sky Jiang, Haoxin Zeng, Copyright reserved except outside resources.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://lab.seg3125.uocourse.skycloud.wang" title="Lab Home Page">Home Page</a></li>
+          <li class="list-inline-item"><a href="https://blog.jixiaob.cn/backup/hertakuru/" title="kururu~">Background Img</a></li>
 
- </div>
+        </ul>
+      </div>
+    </footer>
 
-  <footer class="footer mt-auto py-3 bg-danger text-white">
-  <div class="container text-middle">
-    <p>Web design: Yucheng Chen, Sky Jiang, Haoxin Zeng, Copyright reserved except outside resources.</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="/404.html" title="Lab Home Page">Home Page</a></li>
-      <li class="list-inline-item"><a href="https://blog.jixiaob.cn/backup/hertakuru/" title="kururu~">Background Img</a></li>
-
-    </ul>
   </div>
-</footer>
-
 </body>
 
 </html>
