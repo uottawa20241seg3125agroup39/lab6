@@ -11,10 +11,29 @@ function submitForm(){
   let q5=!$('input[name="q5-choice"]:checked').val();
   let q6=!$('#rate').val();
   let q7=!$('input[name="q7-choice"]:checked').val();
-  let q8=!$('input[name="q8-choice"]:checked').val();
-  if (q11 || q12 || q2 || q3 || q4 || q5 || q6 || q7 || q8){
+  // let q8=!$('input[name="q8-choice"]:checked').val();
+  if (q11 || q12 || q2 || q3 || q4 || q5 || q6 || q7 ){
     alert("Please answer all questions");
     return false;
   }
-  window.location.href = "submitted.html";
+  // console.log($('#survey-body').serializeArray());
+  let form=$('#survey-body').serializeArray();
+  $.ajax({
+    type: 'POST',
+    url: '/submit',
+    data:form,
+    success: function(data){
+      console.log(data);
+      let name=$('input[name="firstname"]').val();
+      name+=' '+$('input[name="lastname"]').val();
+      window.location.href = `/submitted?name=${name}`;
+    },
+    error: function(data){
+      console.log(data);
+      console.log(form);
+      alert('Error submitting the form');
+    }
+  })
+
+  return false;
 }
