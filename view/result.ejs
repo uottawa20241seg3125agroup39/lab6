@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Results</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 10px;
+      }
+    </style>
+</head>
+<body>
+<h1>Result only available in SERVER INSTANCE LIFE. Restart server will erase data</h1>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>Question</th>
+            <th>Choice</th>
+            <th>Count</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let k1 in data){ %>
+            <% for (let k2 in data[k1]){%>
+                <tr>
+                    <td><%= k1 %></td>
+                    <td><%= k2 %></td>
+                    <td><%= data[k1][k2] %></td>
+                </tr>
+            <%}%>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
